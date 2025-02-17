@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+	<title>Home</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/effects.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+
+  <script src="assets/js/modernizr-2.6.2.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/core.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script> -->
+</head>
+<body>
+      <div id="loader-wrapper">
+	<video autoplay muted loop id="bg-video">
+          <source src="video.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+      </video>
+      <div class="overlay"></div>
+      
+      <div id="loader">
+        <img src="loaderlogo.svg" width="100%" height="auto">
+        <div class="sp sp-loadbar"></div>
+        <div id="loader_contentx">
+          <span>Loading Awesomeness...</span>
+        </div>
+      </div>
+      <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+
+    </div>
+<div id='icons'>
+  <a href="https://twitter.com/kjscesymphony" target="_blank" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a>
+<a href="https://www.facebook.com/KJSCESymphony/" target="_blank" class="icon-button facebook"><i class="fa fa-facebook"></i><span></span></a>
+<a href="https://www.instagram.com/kjscelive/" target="_blank" class="icon-button instagram"><i class="fa fa-instagram"></i><span></span></a>
+<a href="https://www.youtube.com/KJSCELive" target="_blank" class="icon-button youtube"><i class="fa fa-youtube"></i><span></span></a>
+<!-- <a href="#" class="icon-button pinterest"><i class="fa fa-pinterest"></i><span></span></a> -->
+</div>
+
+
+
+  <div class="container">
+    <!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
+    <input id="toggle" type="checkbox">
+
+    <!-- IMPORTANT: Any element that we want to modify when the checkbox state changes go here, being "sibling" of the checkbox element -->
+
+    <!-- This label is tied to the checkbox, and it will contain the toggle "buttons" -->
+    <label class="toggle-container" for="toggle">
+        <!-- If menu is open, it will be the "X" icon, otherwise just a clickable area behind the hamburger menu icon -->
+        <span class="button button-toggle"></span>
+    </label>
+
+    <!-- The nav menu -->
+    <nav class="nav">
+      <a class="nav-item" href="index.html">Home</a>
+      
+      <a class="nav-item" href="events.html">Events</a>
+      
+      <!-- <a class="nav-item" href="test.html">Shield ScoreCard</a> -->
+      <a class="nav-item" href="gallery.html">Gallery</a>
+      
+      <a class="nav-item" href="sponsors.html">Sponsors</a>
+      <a class="nav-item" href="contactus.html">Contact Us</a>
+        <!-- <a id="navlogo" class="nav-item" href=""><img src="logo.png" style="height: 70px; width: auto;"></a> -->
+    </nav>
+
+    <!-- Just dummy content like in the animated gif -->
+<div id="navlogo"><a href="index.html"><img src="dummy.png"></a></div>
+</div>
+
+  <div class="card" id="card1">
+    
+
+  </div>
+  <!-- <div class="card" id="card4"></div> -->
+<!--   <div class="card" id="card5"></div>
+  <div class="card" id="card6"></div>
+  <div class="card" id="card7"></div>
+  <div class="card" id="card8"></div>
+  <div class="card" id="card9"></div> -->
+</div>
+<div class="about-container">
+  <header class="header">
+      
+      
+  </header>
+  
+  <div class="about-content">
+    <div class="side-text">ABOUT US</div>
+    <div class="content-container">
+        <div class="main-content">
+            <p class="highlight">
+                Welcome to our innovative platform where passion meets performance.
+                We're dedicated to delivering excellence in everything we do.
+            </p>
+            <p>
+                Our team brings together the finest talents from across the industry, 
+                working tirelessly to push the boundaries of what's possible. 
+                With years of experience and a commitment to innovation, we continue 
+                to set new standards in our field.
+            </p>
+            <p>
+                Discover more about our services, latest projects, and upcoming events 
+                through our comprehensive platform. Stay updated with our latest 
+                developments and join us on this exciting journey.
+            </p>
+        </div>
+        <div class="gif-container">
+            <img src="f1.gif" alt="F1 Racing GIF">
+        </div>
+    </div>
+</div>
+
+
+<script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
+<script>
+(function() {
+    function scrollHorizontally(e) {
+        e = window.event || e;
+        // console.log(e);
+        // console.log(Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail))));
+        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+        document.getElementById('scrolling-wrapper').scrollLeft -= (delta*80); // Multiplied by 40
+        e.preventDefault();
+    }
+    if (document.getElementById('scrolling-wrapper').addEventListener) {
+        // IE9, Chrome, Safari, Opera
+        document.getElementById('scrolling-wrapper').addEventListener("mousewheel", scrollHorizontally, false);
+        // Firefox
+        document.getElementById('scrolling-wrapper').addEventListener("DOMMouseScroll", scrollHorizontally, false);
+    } else {
+        // IE 6/7/8
+        document.getElementById('scrolling-wrapper').attachEvent("onmousewheel", scrollHorizontally);
+    }
+})();
+</script>
+</body>
+</html>
